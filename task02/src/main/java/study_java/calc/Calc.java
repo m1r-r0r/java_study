@@ -54,5 +54,6 @@ public class Calc {
             }
         } while (!check);
         System.out.printf("The result is %s", df.format(result));
+        scanner.close();
     }
 }

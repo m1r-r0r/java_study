@@ -43,5 +43,6 @@ public class Arraylen {
             if(arrStr[maxLenIndex].length() < arrStr[i].length()) maxLenIndex = i;
         }
         System.out.println("The longest word is " + arrStr[maxLenIndex]);
+        scanner.close();
     }
 }

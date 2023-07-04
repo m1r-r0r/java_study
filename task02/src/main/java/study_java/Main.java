@@ -34,5 +34,6 @@ public class Main {
                 Arraylen.evaluateArrLen();
                 break;
         }
+        scanner.close();
     }
 }
