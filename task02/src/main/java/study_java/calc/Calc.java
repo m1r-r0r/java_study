@@ -19,7 +19,7 @@ public class Calc {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter calc expression with operation +-/*. Example: 2 + 3.22");
         do {
-            expression = scanner.next().replaceAll(" ", "");
+            expression = scanner.nextLine().replaceAll(" ", "");
             pattern = Pattern.compile(regexSplit);
             splitedExpr = pattern.split(expression);
             if (splitedExpr.length == 2) {
