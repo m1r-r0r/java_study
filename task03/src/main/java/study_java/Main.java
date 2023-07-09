@@ -6,8 +6,6 @@ import study_java.sweet.Etc;
 import study_java.sweet.Jellybean;
 import study_java.sweet.Sweet;
 
-import java.util.Scanner;
-
 /**
  * @author out-bazhin-sa
  *
@@ -16,23 +14,17 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("First task:");
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Вы принимаете, что в случае наличия нескольких одинаковых максимальных или минимальных чисел " +
-                "для целей задачи будет использовано первое из них? Введите \"Да\" для продолжения.");
-        boolean check;
-        do {
-            check = true;
-            String line = scanner.nextLine();
-            if(!line.equals("Да")) check = false;
-        } while(!check);
-
+        System.out.println("В случае наличия нескольких одинаковых максимальных или минимальных чисел для целей задачи будет использовано первое из них.");
         IntArray intArray = new IntArray();
         System.out.print("Original:\t");
         intArray.printIntArray();
         intArray.reverseIntArray();
-        System.out.print("Reversed:\t");
-        intArray.printIntArray();
+        if(intArray.getCheck()) {
+            System.out.print("Reversed:\t");
+            intArray.printIntArray();
+        }
+        else System.out.println("Этот массив не содержит минимальное положительное или максимальное отрицательное число.");
+
 
         System.out.println();
         System.out.println("Second task:");
